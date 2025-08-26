@@ -4,6 +4,7 @@ import { FeaturesCards } from "@/components/Features";
 import { Footer } from "@/components/Footer";
 import { HeaderMenu } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { LetsWorkTogether } from "@/components/LetsWorkTogether";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
     <FeaturesCards />
     <Clients />
     <Contact />
+    <LetsWorkTogether />
     <Footer />
     </>
   );
