@@ -1,0 +1,124 @@
+.container {
+    padding: 1rem;
+
+    h2 {
+        font-size: 32px;
+        text-align: center;
+
+    }
+
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .imageWrapper {
+            position: relative;
+            width: 80vw;
+            max-width: 400px;
+            height: auto;
+            aspect-ratio: 1; 
+        }
+
+        .formWrapper {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            gap: 0.5rem;
+            background-color: var(--color-dgray);
+            border-radius: 1rem;
+            padding: 2rem;
+
+            label {
+                display: flex;
+                flex-direction: column;
+                font-weight: 500;
+                font-size: 1.1rem;
+                color: var(--color-text);
+                margin-bottom: 0.25rem;
+            }
+
+            input,
+            textarea {
+                padding: 0.75rem 1rem;
+                font-size: 1rem;
+                font-family: inherit;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                outline-offset: 2px;
+                outline-color: transparent;
+                transition: outline-color 0.2s ease, border-color 0.2s ease;
+                box-sizing: border-box;
+
+                line-height: 1.5;
+        
+            }
+
+            input:focus,
+            textarea:focus {
+                outline-color: var(--color-green);
+                border-color: var(--color-green);
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+
+            button {
+                padding: 0.75rem 1rem;
+                background-color: var(--color-green);
+                color: white;
+                font-weight: 600;
+                font-size: 1.1rem;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: var(--color-blue);
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .container {
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 4rem;
+
+        }
+
+        .flexContainer {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            .imageWrapper {
+                flex: 1;
+                max-width: 600px;
+                height: 400px;
+            }
+
+            .formWrapper {
+                max-width: 600px;
+                flex: 1;
+                gap: 1rem;
+
+                input,
+                textarea {
+                }
+
+                button {
+                }
+            }
+        }
+    }
+}
