@@ -1,5 +1,20 @@
-import { createTheme } from '@mantine/core';
+import { createTheme, Title } from '@mantine/core';
 
 export const theme = createTheme({
-  /* Put your mantine theme override here */
+    fontFamily: 'OpenSans, sans-serif',
+  // fontFamilyMonospace: 'Monaco, Courier, monospace',
+  headings: { fontFamily: 'Montserrat, sans-serif' },
+
+  components: {
+    Title: {
+      defaultProps: {
+        c: '#414141ff'
+      }
+    },
+    Text: {
+      defaultProps: {
+        c: '#414141ff'
+      }
+    }
+  }
 });

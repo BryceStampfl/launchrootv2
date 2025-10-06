@@ -1,13 +1,21 @@
 .card {
-  height: 440px;
-  width: 440px;
+ flex: 1 1 calc(25% - 1rem);
+  aspect-ratio: 1 / 1; /* keeps it square */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+  @media (max-width: 768px) {
+  
+    flex: 1 1 100%;
+  
 }
+}
+
+
 
 .title {
   font-family: Outfit, sans-serif;

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import styles from './Contact.module.css';
+import { Button } from '@mantine/core';
 
 const Contact: React.FC = () => {
     return (
@@ -7,14 +7,6 @@ const Contact: React.FC = () => {
             <h2>Contact Us</h2>
 
             <div className={styles.flexContainer}>
-                <div className={styles.imageWrapper}>
-                    <Image
-                        src='/undraw/contact-us.svg'
-                        fill
-                        alt="Contact illustration"
-                        style={{ objectFit: 'contain' }}
-                    />
-                </div>
 
                 <form className={styles.formWrapper} /* use form element for semantics */
                     onSubmit={e => {
@@ -34,7 +26,12 @@ const Contact: React.FC = () => {
                     <label htmlFor="message">Send us a message!</label>
                     <textarea id="message" placeholder="Your message here..." />
 
-                    <button type="submit">Submit</button>
+                    <Button 
+                          variant="gradient"
+                    gradient={{ from: '#133337', to: '#005523', deg: 90 }}
+                    size='lg'
+                    color='#133337'>Submit</Button>
+                    
                 </form>
             </div>
         </div>

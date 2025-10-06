@@ -1,14 +1,15 @@
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
-import { ActionIcon, Anchor, Group } from '@mantine/core';
+import { IconMail } from '@tabler/icons-react';
+import { ActionIcon, Anchor, Group, Image, Box, Container } from '@mantine/core';
 // import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './Footer.module.css';
+import NextImage from 'next/image';
+import Icon from '@/public/BrandLogoFinal.svg'
 
 const links = [
   { link: '#', label: 'Contact' },
   { link: '#', label: 'Privacy' },
-  { link: '#', label: 'Blog' },
-  { link: '#', label: 'Store' },
-  { link: '#', label: 'Careers' },
+  { link: '#', label: 'LinkedIn' },
+
 ];
 
 export function Footer() {
@@ -26,24 +27,22 @@ export function Footer() {
   ));
 
   return (
+          <Container size="xl">
     <div className={classes.footer}>
       <div className={classes.inner}>
-        {/* <MantineLogo size={28} /> */} <div>logo</div>
+               <Box className={classes.imageWrapper} >
+                  <Image component={NextImage} src={Icon} alt="My image" />
+                </Box>
 
         <Group className={classes.links}>{items}</Group>
 
         <Group gap="xs" justify="flex-end" wrap="nowrap">
           <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandTwitter size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandYoutube size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandInstagram size={18} stroke={1.5} />
+            <IconMail size={18} stroke={1.5} />
           </ActionIcon>
         </Group>
       </div>
     </div>
+    </Container>
   );
 }
