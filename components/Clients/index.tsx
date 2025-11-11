@@ -36,24 +36,21 @@ const data = [
       '/Clients/PenrynFlowerFarm.jpg',
     title: 'Penryn Flower Farm',
     category: 'Small Business',
+    url: 'https://PenrynFlowerFarm.com'
   },
   {
     image:
       '/Clients/Fashion.webp',
     title: 'Fashion Brand',
     category: 'Fashion',
+    url: 'https://main.d37qmw9j30co66.amplifyapp.com/'
   },
   {
     image:
-      '/Clients/PenrynFlowerFarm.jpg',
-    title: 'Mountains at night: 12 best locations to enjoy the view',
-    category: 'nature',
-  },
-    {
-    image:
-      '/Clients/PenrynFlowerFarm.jpg',
-    title: 'Mountains at night: 12 best locations to enjoy the view',
-    category: 'nature',
+      '/Clients/truck.webp',
+    title: 'Moving Service',
+    category: 'small business',
+    url: 'https://main.d3psmycug9ml8.amplifyapp.com/'
   },
 
 ];
@@ -80,7 +77,7 @@ function ClientsTitleBox() {
 
 export function Clients() {
   const slides = data.map((item) => (
-      <Card  key={item.title} {...item} />
+          <Card  key={item.title} {...item} />
   ));
     return(
       <div>
@@ -98,6 +95,5 @@ export function Clients() {
               </div>
 
     )
-    
-
+  
 }
