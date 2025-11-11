@@ -47,7 +47,7 @@ const data = [
   },
   {
     image:
-      '/Clients/truck.webp',
+      '/Clients/Truck.webp',
     title: 'Moving Service',
     category: 'small business',
     url: 'https://main.d3psmycug9ml8.amplifyapp.com/'
