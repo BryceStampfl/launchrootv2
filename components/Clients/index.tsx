@@ -7,13 +7,15 @@ interface CardProps {
   image: string;
   title: string;
   category: string;
+  url: string;
 }
 
-function Card({ image, title, category }: CardProps) {
+function Card({ image, title, category, url }: CardProps) {
   return (
     
     <Paper 
-      pos='relative' p="xl" radius="0"style={{ backgroundImage: `url(${image})` }}className={classes.card}
+    onClick={() => window.open(url, "_blank")}
+      pos='relative' p="xl" radius="0"style={{ backgroundImage: `url(${image})`, cursor: "pointer" }}className={classes.card}
     >         
       <Overlay color="#000000ff"
           backgroundOpacity={0.6} 
@@ -77,6 +79,7 @@ function ClientsTitleBox() {
 
 export function Clients() {
   const slides = data.map((item) => (
+    
           <Card  key={item.title} {...item} />
   ));
     return(
