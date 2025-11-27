@@ -60,32 +60,45 @@ export function HeaderMenu() {
 
   return (
     <header className={classes.header}>
-      <Container size="xl" p={0}>
-        <div className={classes.inner}>
-          {/* Logo */}
-          <Flex direction="row" h="100%"  justify={'flex-start'}>
-            <Box className={classes.imageWrapper} >
-              <Image 
-                style={{ display: 'block', boxSizing: 'border-box' }}
-              className={classes.headerIcon} component={NextImage} src={Icon} alt="My image"/>
-            </Box>
+      <Container size="xl" p={0} m={0} h={'100%'}>
+          {/* Flex for entire header*/}
+          <Flex className={classes.flexHeader}>
+                      
+            {/* Flex for left brand icon + name*/}
+            <Flex className={classes.flexHeaderLeft}>
 
-            <Box className={classes.imageWrapper} >
-              <Image   style={{ display: 'block' }}  className={classes.headerName} component={NextImage} src={LogoText} alt="My image" />
-            </Box>
+              {/* Logo */}
+              <Box className={classes.iconWrapper}>
+                <Image 
+                  component={NextImage}
+                  src={Icon}
+                  alt="Brand Icon"
+                  style={{ objectFit: 'contain', height: '100%' }}
+                />
+              </Box>
+
+              {/* Title */}
+              <Box className={classes.nameWrapper}>
+                <Image 
+                  component={NextImage} 
+                  src={LogoText} 
+                  alt="Business Name" 
+                  style={{ objectFit: 'contain', height: '100%' }}
+                />
+              </Box>
+            </Flex>
+
+            <div>
+              {/* Desktop menu */}
+              <Group gap={10} visibleFrom="md">
+                {desktopItems}
+              </Group>
+
+              {/* Mobile burger button */}
+              <Burger opened={opened} mx={12} onClick={toggle} size="md" hiddenFrom="md" />
+            </div>
           </Flex>
-
-          <div>
-          {/* Desktop menu */}
-          <Group gap={10} visibleFrom="md">
-            {desktopItems}
-          </Group>
-
-          {/* Mobile burger button */}
-          <Burger opened={opened} mx={12} onClick={toggle} size="md" hiddenFrom="md" />
-          </div>
-        </div>
-      </Container>
+        </Container>
 
       {/* Mobile menu (shown only when opened) */}
       {opened && (

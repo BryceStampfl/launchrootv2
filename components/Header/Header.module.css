@@ -1,6 +1,8 @@
 .header {
+  
+  display: flex;
   position: fixed;
-  top:0;
+  top: 0;
   z-index: 100;
   width: 100%;
   height: 75px;
@@ -25,47 +27,54 @@
     }
 }
 
-.inner {
-  display: flex;
+.flexHeader {
+  
   justify-content: space-between;
   align-items: center;
-  height: 75px;
-  padding: 0.25rem 0 0.25rem 0;
-
-  /* outline: 1px solid blue; */
+  height: 100%;
+  outline: 1px dashed green;
 }
 
-
-.imageWrapper {
+.flexHeaderLeft{
+  display: flex;
+  width: 100%;
   height: 100%;
-  padding: 0px;
-  margin: 0px;
 }
 
-.imageWrapper img {
-   max-height: 100%;      /* respect parent, but don’t crop */
-  object-fit: contain;
-  height: 100%;
+.iconWrapper {
+  display: flex;
+  align-items: center;
 
+  height: 100%;
+  width: auto;
+  
+  padding: 5px 8px 3px 5px;
+}
+
+.nameWrapper {
+  display: flex;
+  align-items: center;
+  width: auto;       /* shrink to fit image */
+  height: 100%;
+  max-width: 300px;
 }
 
 .headerIcon{
-  max-width: 100px;
   height: 100%;
   margin-left: 0;
 
   @media ((max-width: $mantine-breakpoint-sm)) {
-    margin-left: 15px;
-    max-width: 60px;
+    /* margin-left: 15px; */
+    /* max-width: 60px; */
   }
 }
 
 .headerName{
-    max-width: 358px;
+    /* max-width: 358px; */
 
   @media ((max-width: $mantine-breakpoint-sm)) {
-    margin-left: 15px;
-    max-width: 250px;
+    /* margin-left: 15px;
+    max-width: 250px; */
  }
 }
 
