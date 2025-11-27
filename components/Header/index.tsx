@@ -60,26 +60,30 @@ export function HeaderMenu() {
 
   return (
     <header className={classes.header}>
-      <Container size="xl">
+      <Container size="xl" p={0}>
         <div className={classes.inner}>
           {/* Logo */}
-          <Flex direction="row" h="100%">
-            <Box className={classes.imageWrapper} p="0.1rem">
-              <Image component={NextImage} src={Icon} alt="My image" />
+          <Flex direction="row" h="100%"  justify={'flex-start'}>
+            <Box className={classes.imageWrapper} >
+              <Image 
+                style={{ display: 'block', boxSizing: 'border-box' }}
+              className={classes.headerIcon} component={NextImage} src={Icon} alt="My image"/>
             </Box>
 
-            <Box className={classes.imageWrapper} p="1rem">
-              <Image component={NextImage} src={LogoText} alt="My image" />
+            <Box className={classes.imageWrapper} >
+              <Image   style={{ display: 'block' }}  className={classes.headerName} component={NextImage} src={LogoText} alt="My image" />
             </Box>
           </Flex>
 
+          <div>
           {/* Desktop menu */}
-          <Group gap={10} visibleFrom="sm">
+          <Group gap={10} visibleFrom="md">
             {desktopItems}
           </Group>
 
           {/* Mobile burger button */}
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          <Burger opened={opened} mx={24} onClick={toggle} size="md" hiddenFrom="md" />
+          </div>
         </div>
       </Container>
 
