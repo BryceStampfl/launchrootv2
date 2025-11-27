@@ -82,7 +82,7 @@ export function HeaderMenu() {
           </Group>
 
           {/* Mobile burger button */}
-          <Burger opened={opened} mx={24} onClick={toggle} size="md" hiddenFrom="md" />
+          <Burger opened={opened} mx={12} onClick={toggle} size="md" hiddenFrom="md" />
           </div>
         </div>
       </Container>

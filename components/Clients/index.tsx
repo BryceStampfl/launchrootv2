@@ -69,7 +69,7 @@ function ClientsTitleBox() {
                 gap={{base: '1rem', sm: '10rem' }}
             >
               <Text c='white' size="34px" >Explore Our Recent Work</Text>
-              <Text style={{maxWidth:'600px'}} c='white' size='md'>Websites, software applications, and more. It's all right here. Browse our comprehensive case studies below to learn more about our unique process - from strategy through launch.</Text>
+              <Text style={{maxWidth:'600px'}} c='white' size='md'>  Discover the projects we’ve brought to life for our clients. From recent collaborations to past successes, explore our work and the impact we’ve made.</Text>
 
             </Flex>
           </div>
