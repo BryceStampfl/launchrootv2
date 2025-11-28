@@ -41,6 +41,7 @@
   height: 100%;
   padding: 0px;
   margin: 0px;
+ 
 }
 
 .imageWrapper img {
@@ -53,11 +54,12 @@
 .headerIcon{
   max-width: 100px;
   height: 100%;
-  margin-left: 0;
+  margin-right: 2rem;
 
   @media ((max-width: $mantine-breakpoint-sm)) {
     margin-left: 15px;
     max-width: 60px;
+    margin-right: 0;
   }
 }
 
