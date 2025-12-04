@@ -15,14 +15,9 @@ export function Hero() {
           Whether you have a seedling of an idea, or already have roots, we can help it grow to its full potential.
         </Text>
 
-<<<<<<< HEAD
         <Button
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} color="#005523" variant="filled" size="sm" radius="sm" className={classes.control}>
           <Text ff='montserrat' c='white'>Get Started</Text>
-=======
-        <Button color="#005523" variant="filled" size="sm" radius="sm" className={classes.control}>
-          <Text ff='montserrat'  c='white'>Get Started</Text>
->>>>>>> origin/master
         </Button>
       </Container>
     </div>
