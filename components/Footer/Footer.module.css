@@ -1,0 +1,36 @@
+.footer {
+ border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+
+.imageWrapper {
+  display: flex;             /* ensures image can be centered if needed */
+  align-items: center;
+  height: 5rem;
+    /* @media (max-width: $mantine-breakpoint-sm) {
+    height: 80px;   
+    }           */
+}
+
+.imageWrapper img {
+   max-height: 100%;      /* respect parent, but don’t crop */
+  object-fit: contain;
+
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+  }
+}
+
+.links {
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-top: var(--mantine-spacing-lg);
+    margin-bottom: var(--mantine-spacing-sm);
+  }
+}

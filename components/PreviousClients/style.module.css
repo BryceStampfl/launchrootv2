@@ -1,0 +1,39 @@
+.container {
+    h3 {
+        text-align: center;
+        color: var(--color-text);
+    }
+
+    .imageWrapper {
+        position: relative;
+        width: 100%;
+        height: 6rem;
+        
+    }
+
+    .flex {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    @media (min-width: 1200px) {
+        h3 {
+            margin-bottom: 2rem;
+        }
+
+        .imageWrapper {
+            height: 8rem;
+        }
+    }
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 500;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: 30px;
+  }
+}
