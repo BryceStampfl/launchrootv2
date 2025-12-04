@@ -12,7 +12,6 @@ interface CardProps {
 
 function Card({ image, title, category, url }: CardProps) {
   return (
-<<<<<<< HEAD
 
     <Paper
       onClick={() => window.open(url, "_blank")}
@@ -26,21 +25,6 @@ function Card({ image, title, category, url }: CardProps) {
           {category}
         </Text>
         <Title c='white' order={3} className={classes.title}>
-=======
-    
-    <Paper 
-    onClick={() => window.open(url, "_blank")}
-      pos='relative' p="xl" radius="0"style={{ backgroundImage: `url(${image})`, cursor: "pointer" }}className={classes.card}
-    >         
-      <Overlay color="#000000ff"
-          backgroundOpacity={0.6} 
-          zIndex={1} />
-      <Box pos='static' style={{zIndex: 2}} >
-        <Text c='white' className={classes.category} size="xs">
-          {category}
-        </Text>
-        <Title  c='white' order={3} className={classes.title}>
->>>>>>> origin/master
           {title}
         </Title>
       </Box>
@@ -53,40 +37,27 @@ const data = [
     image:
       '/Clients/PenrynFlowerFarm.jpg',
     title: 'Penryn Flower Farm',
-<<<<<<< HEAD
     category: 'Flower Shop',
-=======
-    category: 'Small Business',
->>>>>>> origin/master
     url: 'https://PenrynFlowerFarm.com'
   },
   {
     image:
       '/Clients/Fashion.webp',
     title: 'Fashion Brand',
-<<<<<<< HEAD
     category: 'Fashion Brand Template',
-=======
-    category: 'Fashion',
->>>>>>> origin/master
     url: 'https://main.d37qmw9j30co66.amplifyapp.com/'
   },
   {
     image:
       '/Clients/Truck.webp',
     title: 'Moving Service',
-<<<<<<< HEAD
     category: 'Moving Company',
-=======
-    category: 'small business',
->>>>>>> origin/master
     url: 'https://main.d3psmycug9ml8.amplifyapp.com/'
   },
 
 ];
 
 function ClientsTitleBox() {
-<<<<<<< HEAD
   return (
     <div className={classes.container}>
       <Flex
@@ -102,30 +73,12 @@ function ClientsTitleBox() {
 
       </Flex>
     </div>
-=======
-  return(
-          <div className={classes.container}>
-            <Flex 
-                style={{height: '100%'}} 
-                p='1rem'
-                direction={{ base: 'column', sm: 'row' }}
-                justify='center'
-                align='center'
-                gap={{base: '1rem', sm: '10rem' }}
-            >
-              <Text c='white' size="34px" >Explore Our Recent Work</Text>
-              <Text style={{maxWidth:'600px'}} c='white' size='md'>  Discover the projects we’ve brought to life for our clients. From recent collaborations to past successes, explore our work and the impact we’ve made.</Text>
-
-            </Flex>
-          </div>
->>>>>>> origin/master
 
   )
 }
 
 export function Clients() {
   const slides = data.map((item) => (
-<<<<<<< HEAD
 
     <Card key={item.title} {...item} />
   ));
@@ -146,26 +99,4 @@ export function Clients() {
 
   )
 
-=======
-    
-          <Card  key={item.title} {...item} />
-  ));
-    return(
-      <div>
-        <ClientsTitleBox />
-         <Flex 
-            mih={50}
-            gap="0"
-            justify="center"
-            align="center"
-            direction="row"
-            wrap={{base: "wrap", md: 'nowrap'}}
-          >
-        {slides}
-        </Flex>
-              </div>
-
-    )
-  
->>>>>>> origin/master
 }
